@@ -1,4 +1,5 @@
 import react from "react";
+import { Link } from "react-router-dom";
 import AccountBalance from "../Components/AccountBalance";
 
 export default function Home(props) {
@@ -11,6 +12,8 @@ export default function Home(props) {
       <h1>Bank of React</h1>
 
       <AccountBalance accountBalance={props.accountBalance} />
+
+      <Link to="/userProfile">UserProfile</Link>
     </div>
   );
 }
