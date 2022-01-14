@@ -4,13 +4,14 @@ import Home from "./Pages/Home";
 import React, { useState } from "react";
 import UserProfile from "./Pages/UserProfile";
 import Login from "./Pages/Login";
+import Debits from "./Pages/Debits";
 
 function App() {
   const [accountBalance, setAccountBalance] = useState(14568.27);
 
   const [currentUser, setCurrentUser] = useState({
-    userName: "Kakashi Hatake",
-    memberSince: "09/15/1973",
+    userName: "Your name could be here!",
+    memberSince: "Make an account and it'll be today!",
   });
 
   const mockLogin = (loginInfo) => {
@@ -40,6 +41,7 @@ function App() {
             path="/login"
             element={<Login user={currentUser} mockLogin={mockLogin} />}
           />
+          <Route path="/debits" element={<Debits />} />
         </Routes>
       </BrowserRouter>
     </div>

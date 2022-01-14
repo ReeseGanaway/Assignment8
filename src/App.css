@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+#DebitsTable {
+  display: inline-block;
+}
+
+#DescriptionDiv {
+  width: 400px;
+  text-align: left;
+}
+
+#AmountDiv {
+  width: 400px;
+  text-align: left;
+}
+#DateDiv {
+  padding-bottom: 20px;
+  width: 400px;
+  text-align: left;
+}
