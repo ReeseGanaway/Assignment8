@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import UserProfile from "./Pages/UserProfile";
 import Login from "./Pages/Login";
 import Debits from "./Pages/Debits";
+import Credits from "./Pages/Credits";
 
 function App() {
   const [accountBalance, setAccountBalance] = useState(14568.27);
@@ -45,6 +46,11 @@ function App() {
           <Route
             path="/debits"
             element={<Debits accountBalance={accountBalance} />}
+          />
+
+          <Route
+            path="/credits"
+            element={<Credits accountBalance={accountBalance} />}
           />
         </Routes>
       </BrowserRouter>

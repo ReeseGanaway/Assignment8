@@ -33,10 +33,13 @@ export default function Login(props) {
           UserProfile
         </Link>
         <Link className="Links" to="/login">
-          login
+          Login
         </Link>
         <Link className="Links" to="/debits">
           Debits
+        </Link>
+        <Link className="Links" to="/credits">
+          Credits
         </Link>
       </div>
       <form onSubmit={handleSubmit}>
