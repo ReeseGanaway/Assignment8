@@ -55,3 +55,24 @@
   width: 400px;
   text-align: left;
 }
+
+#allContent {
+  display: flex;
+}
+
+#forms {
+  width: 33.33333333%;
+  text-align: left;
+}
+
+.DebitLinks {
+  padding: 10px;
+}
+
+.UserProfileLinks {
+  padding: 10px;
+}
+
+.NavBars {
+  padding: 10px;
+}

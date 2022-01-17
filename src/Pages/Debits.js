@@ -48,43 +48,47 @@ export default function Debits() {
     <div>
       <h1>Your Debits</h1>
 
-      <div id="DebitsTable">
-        {debits.map((debit, key) => (
-          <div key={key}>
-            <div id="DescriptionDiv">
-              {" "}
-              <strong>Description</strong> : {debits[key].description}
+      <div id="allContent">
+        <div id="forms">
+          <form onSubmit={onSubmit}>
+            <div>
+              <label>Debit Description</label>
+              {<input type="text" onChange={handleDescriptionChange}></input>}
             </div>
-            <div id="AmountDiv">
-              {" "}
-              <strong>Amount</strong> : {debits[key].amount}
+
+            <div>
+              <label>Debit Amount</label>
+              <input type="text" onChange={handleAmountChange} />
             </div>
-            <div id="DateDiv">
-              {" "}
-              <strong>Date</strong> :{debits[key].date}
+
+            <div>
+              <label>Debit Date</label>
+              <input type="text" onChange={handleDateChange} />
             </div>
-          </div>
-        ))}
+
+            <button>Add New Debit</button>
+          </form>
+        </div>
+
+        <div id="DebitsTable">
+          {debits.map((debit, key) => (
+            <div key={key}>
+              <div id="DescriptionDiv">
+                {" "}
+                <strong>Description</strong> : {debits[key].description}
+              </div>
+              <div id="AmountDiv">
+                {" "}
+                <strong>Amount</strong> : {debits[key].amount}
+              </div>
+              <div id="DateDiv">
+                {" "}
+                <strong>Date</strong> :{debits[key].date}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-
-      <form onSubmit={onSubmit}>
-        <div>
-          <label>Debit Description</label>
-          {<input type="text" onChange={handleDescriptionChange}></input>}
-        </div>
-
-        <div>
-          <label>Debit Amount</label>
-          <input type="text" onChange={handleAmountChange} />
-        </div>
-
-        <div>
-          <label>Debit Date</label>
-          <input type="text" onChange={handleDateChange} />
-        </div>
-
-        <button>Add New Debit</button>
-      </form>
     </div>
   );
 }

@@ -28,6 +28,7 @@ function App() {
             path="/home"
             element={<Home accountBalance={accountBalance} />}
           />
+          <Route path="/" element={<Home accountBalance={accountBalance} />} />
           <Route
             path="/userProfile"
             element={

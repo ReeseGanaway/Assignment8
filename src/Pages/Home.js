@@ -5,15 +5,24 @@ import AccountBalance from "../Components/AccountBalance";
 export default function Home(props) {
   return (
     <div>
-      <img
-        src="https://res.cloudinary.com/andreahabib/image/upload/v1642026304/React_Bank_dk7n1a.png"
-        alt="bank"
-      />
-      <h1>Bank of React</h1>
+      <div className="NavBars">
+        <Link className="UserProfileLinks" to="/userProfile">
+          UserProfile
+        </Link>
+        <Link className="DebitLinks" to="/debits">
+          Debits
+        </Link>
+      </div>
 
-      <AccountBalance accountBalance={props.accountBalance} />
+      <div>
+        <img
+          src="https://res.cloudinary.com/andreahabib/image/upload/v1642026304/React_Bank_dk7n1a.png"
+          alt="bank"
+        />
+        <h1>Bank of React</h1>
 
-      <Link to="/userProfile">UserProfile</Link>
+        <AccountBalance accountBalance={props.accountBalance} />
+      </div>
     </div>
   );
 }
