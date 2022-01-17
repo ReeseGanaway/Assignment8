@@ -17,6 +17,9 @@ export default function UserProfile(props) {
         <Link className="Links" to="/debits">
           Debits
         </Link>
+        <Link className="Links" to="/credits">
+          Credits
+        </Link>
       </div>
       <h1>User Profile</h1>
 

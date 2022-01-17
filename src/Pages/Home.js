@@ -18,6 +18,9 @@ export default function Home(props) {
         <Link className="Links" to="/debits">
           Debits
         </Link>
+        <Link className="Links" to="/credits">
+          Credits
+        </Link>
       </div>
 
       <div>
