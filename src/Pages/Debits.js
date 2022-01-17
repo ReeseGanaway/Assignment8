@@ -1,21 +1,23 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import AccountBalance from "../Components/AccountBalance";
 
-export default function Debits() {
+export default function Debits(props) {
   const [debits, setDebits] = useState([]);
   const [description, setDescription] = useState();
   const [amount, setAmount] = useState();
   const [date, setDate] = useState();
-  const [id, setId] = useState("Who cares");
+  //let totalDebits = 0;
 
   //setDebits({ amount: 100, name: "Reese" });
 
   async function fetchAPI() {
     const response = await fetch("https://moj-api.herokuapp.com/debits");
     const debitData = await response.json();
-    //const newEntry=0
     setDebits(debitData);
-    //console.log(debitData);
+
     //console.log(debits);
+    //console.log(totalDebits);
   }
 
   useEffect(async () => {
@@ -36,16 +38,32 @@ export default function Debits() {
   const onSubmit = (e) => {
     e.preventDefault();
     const newDebits = [...debits];
-    newDebits.push({ id, description, amount, date });
+    newDebits.push({ description, amount, date });
     setDebits(newDebits);
     console.log(newDebits);
   };
 
   console.log(debits);
   console.log(debits);
+  //debits.map((x) => (totalDebits += debits[x].amount));
 
   return (
     <div>
+      <div className="NavBars">
+        <Link className="Links" to="/home">
+          Home
+        </Link>
+        <Link className="Links" to="/userProfile">
+          UserProfile
+        </Link>
+        <Link className="Links" to="/login">
+          login
+        </Link>
+        <Link className="Links" to="/debits">
+          Debits
+        </Link>
+      </div>
+
       <h1>Your Debits</h1>
 
       <div id="allContent">
@@ -88,6 +106,7 @@ export default function Debits() {
             </div>
           ))}
         </div>
+        <AccountBalance accountBalance={props.accountBalance} />
       </div>
     </div>
   );

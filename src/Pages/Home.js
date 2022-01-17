@@ -6,10 +6,16 @@ export default function Home(props) {
   return (
     <div>
       <div className="NavBars">
-        <Link className="UserProfileLinks" to="/userProfile">
+        <Link className="Links" to="/home">
+          Home
+        </Link>
+        <Link className="Links" to="/userProfile">
           UserProfile
         </Link>
-        <Link className="DebitLinks" to="/debits">
+        <Link className="Links" to="/login">
+          Login
+        </Link>
+        <Link className="Links" to="/debits">
           Debits
         </Link>
       </div>

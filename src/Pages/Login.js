@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Login(props) {
   const [user, setUser] = useState({ userName: "", password: "" });
@@ -24,6 +25,20 @@ export default function Login(props) {
   }
   return (
     <div>
+      <div className="NavBars">
+        <Link className="Links" to="/home">
+          Home
+        </Link>
+        <Link className="Links" to="/userProfile">
+          UserProfile
+        </Link>
+        <Link className="Links" to="/login">
+          login
+        </Link>
+        <Link className="Links" to="/debits">
+          Debits
+        </Link>
+      </div>
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="userName">User Name</label>

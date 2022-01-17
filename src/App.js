@@ -42,7 +42,10 @@ function App() {
             path="/login"
             element={<Login user={currentUser} mockLogin={mockLogin} />}
           />
-          <Route path="/debits" element={<Debits />} />
+          <Route
+            path="/debits"
+            element={<Debits accountBalance={accountBalance} />}
+          />
         </Routes>
       </BrowserRouter>
     </div>
