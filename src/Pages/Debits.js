@@ -57,7 +57,7 @@ export default function Debits(props) {
           UserProfile
         </Link>
         <Link className="Links" to="/login">
-          login
+          Login
         </Link>
         <Link className="Links" to="/debits">
           Debits
